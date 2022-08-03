@@ -17,8 +17,6 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<!-- style css -->
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/product.css">
-
 	<!-- Responsive-->
 	<link rel="stylesheet" href="css/responsive.css">
 	<!-- fevicon -->
@@ -80,10 +78,84 @@
 	</div>
 	<div class="layout_padding gallery_section">
 		<div class="container">
-			<div class="row" id="product">
+			<div class="row">
+				<div class="col-sm-4" id="product">
+					<div class="best_shoes">
+						<p class="best_text">Best Electronices </p>
+						<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">60</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="best_shoes">
+						<p class="best_text">Best Shoes </p>
+						<div class="shoes_icon"><img src="images/shoes-img5.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">400</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="best_shoes">
+						<p class="best_text">Best Shoes </p>
+						<div class="shoes_icon"><img src="images/shoes-img6.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">50</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<div class="best_shoes">
+						<p class="best_text">Sports Shoes</p>
+						<div class="shoes_icon"><img src="images/shoes-img7.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">70</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="best_shoes">
+						<p class="best_text">Sports Shoes</p>
+						<div class="shoes_icon"><img src="images/shoes-img8.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">100</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="best_shoes">
+						<p class="best_text">Sports Shoes</p>
+						<div class="shoes_icon"><img src="images/shoes-img9.png"></div>
+						<div class="star_text">
+
+							<div class="right_part">
+								<div class="shoes_price">$ <span style="color: #ff4e5b;">90</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="buy_now_bt">
-				<button class="buy_text">See More</button>
+				<button class="buy_text">Buy Now</button>
 			</div>
 		</div>
 	</div>
@@ -165,6 +237,9 @@
 		</div>
 	</div>
 	</div>
+	<div id="price" (click)="api()">
+<button>get</button>
+	</div>
 	<!-- section footer end -->
 	<div class="copyright">2019 All Rights Reserved. <a href="https://html.design">Free html Templates</a></div>
 
@@ -172,49 +247,23 @@
 	<!-- Javascript files-->
 	<script src="js/jquery.min.js"></script>
 	<!-- // for menu -->
-	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script> 
 	<script>
-		getProducts();
-		function getProducts() {
-			fetch('https://script.google.com/macros/s/AKfycbwVqmBSz4R-g-quN7wMen8CpsLEtw8zG_uM3YZWwK7juxfRCF2hxRR_QYCT3-cuop2_tg/exec')
-				.then((response) => response.json())
-				.then((resp) => {
-					console.log('tdi products', resp);
-					if (resp.data) {
-						setData(resp.data);
-					}
-				});
-		}
-		function setData(data) {
-			let productDiv = '';
-			for (let i = 0; i < data.length; i++) {
-				let newImgUrl = '';
-				if (data[i].image) {
-					let imgUrl = data[i].image;
-					if (data[i].imagesource && data[i].imagesource == 'google-drive') {
-						let imgUrlArray = imgUrl.split('/');
-						let imgId = imgUrlArray[5];
-						newImgUrl = 'https://drive.google.com/uc?export=view&id=' + imgId;
-					} else {
-						newImgUrl = imgUrl;
-					}
-				} else {
-					newImgUrl = 'images/tdi1.png';
-				}
-				productDiv = productDiv + `
-				<div class="col-sm-4">
-					<div class="card">
-                   <img class="pImg" src="${newImgUrl}" alt="tdi products"">
-                  <h1>${data[i].name}</h1>
-                       <p class="price">₹${data[i].price}</p>
-  
-                       </div>
-				</div>`
-			}
-			let pElement = document.getElementById("product");
-			pElement.innerHTML = productDiv;
-		}
+		fetch('https://script.googleusercontent.com/macros/echo?user_content_key=pMHNmRHnFcROwpZUVhNLaTI0rYgFkgUMt92JQMuQGzRtLdLPxD73QKKRYQpQG8hcd97JuSPvPfoxRcpkITQ_zKiw10OksyOkm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJ90dT7K0M0z_1Q4wggguyfkuRFkpCP3hPO-WDB9mcd2II3PaRAUlhiE8oY2UnU4hMGjVU7yHxmTOaRySOi24GrRzkUPG_JLt9z9Jw9Md8uu&lib=Misq1lTNrWN7ZHXL4VR2l-g04VCGfIjbk')
+			.then((response) => response.json())
+			.then((data) => console.log('tdi products', data));
+
+
+			
 	</script>
+<script>
+	function api(){
+		for(let i=0; i<data.length; i++){
+				console.log('price', data[i].price);
+			}
+	}
+</script>
+
 </body>
 
 </html>

@@ -146,6 +146,15 @@ a,
      -o-transition: all .3s ease-in-out;
      transition: all .3s ease-in-out;
 }
+.logoo{
+    margin: 4%;
+    width: 150px;
+    height: 80px;
+}
+.pImg {
+    max-width: 250px;
+    height: 300px;
+}
 
 img {
      max-width: 100%;
@@ -363,7 +372,7 @@ body{
     display:block; margin-bottom:5px; border:1px solid #00a199; 
     margin-bottom: 5px;}
     
-}
+
 .carousel-indicators li.active{
     margin-bottom:5px; background:#00a199;
     
