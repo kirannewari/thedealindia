@@ -174,46 +174,46 @@
 	<!-- // for menu -->
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script>
-		getProducts();
-		function getProducts() {
-			fetch('https://script.google.com/macros/s/AKfycbwVqmBSz4R-g-quN7wMen8CpsLEtw8zG_uM3YZWwK7juxfRCF2hxRR_QYCT3-cuop2_tg/exec')
-				.then((response) => response.json())
-				.then((resp) => {
-					console.log('tdi products', resp);
-					if (resp.data) {
-						setData(resp.data);
-					}
-				});
-		}
-		function setData(data) {
-			let productDiv = '';
-			for (let i = 0; i < data.length; i++) {
-				let newImgUrl = '';
-				if (data[i].image) {
-					let imgUrl = data[i].image;
-					if (data[i].imagesource && data[i].imagesource == 'google-drive') {
-						let imgUrlArray = imgUrl.split('/');
-						let imgId = imgUrlArray[5];
-						newImgUrl = 'https://drive.google.com/uc?export=view&id=' + imgId;
-					} else {
-						newImgUrl = imgUrl;
-					}
-				} else {
-					newImgUrl = 'images/tdi1.png';
-				}
-				productDiv = productDiv + `
-				<div class="col-sm-4">
-					<div class="card">
-                   <img class="pImg" src="${newImgUrl}" alt="tdi products"">
-                  <h1>${data[i].name}</h1>
-                       <p class="price">₹${data[i].price}</p>
+		//getProducts();
+		// function getProducts() {
+		// 	fetch('https://script.google.com/macros/s/AKfycbwVqmBSz4R-g-quN7wMen8CpsLEtw8zG_uM3YZWwK7juxfRCF2hxRR_QYCT3-cuop2_tg/exec')
+		// 		.then((response) => response.json())
+		// 		.then((resp) => {
+		// 			console.log('tdi products', resp);
+		// 			if (resp.data) {
+		// 				setData(resp.data);
+		// 			}
+		// 		});
+		// }
+		// function setData(data) {
+		// 	let productDiv = '';
+		// 	for (let i = 0; i < data.length; i++) {
+		// 		let newImgUrl = '';
+		// 		if (data[i].image) {
+		// 			let imgUrl = data[i].image;
+		// 			if (data[i].imagesource && data[i].imagesource == 'google-drive') {
+		// 				let imgUrlArray = imgUrl.split('/');
+		// 				let imgId = imgUrlArray[5];
+		// 				newImgUrl = 'https://drive.google.com/uc?export=view&id=' + imgId;
+		// 			} else {
+		// 				newImgUrl = imgUrl;
+		// 			}
+		// 		} else {
+		// 			newImgUrl = 'images/tdi1.png';
+		// 		}
+		// 		productDiv = productDiv + `
+		// 		<div class="col-sm-4">
+		// 			<div class="card">
+        //            <img class="pImg" src="${newImgUrl}" alt="tdi products"">
+        //           <h1>${data[i].name}</h1>
+        //                <p class="price">₹${data[i].price}</p>
   
-                       </div>
-				</div>`
-			}
-			let pElement = document.getElementById("product");
-			pElement.innerHTML = productDiv;
-		}
+        //                </div>
+		// 		</div>`
+		// 	}
+		// 	let pElement = document.getElementById("product");
+		// 	pElement.innerHTML = productDiv;
+		// }
 	</script>
 </body>
 
