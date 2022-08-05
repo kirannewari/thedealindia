@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<!-- site metas -->
-	<title>Shoes</title>
+	<title>Products</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="author" content="">
@@ -71,19 +71,22 @@
 		</div>
 	</div>
 	<!-- New Arrivals section start -->
-	<div class="collection_text">Our Products</div>
-	<div class="collection_section layout_padding">
+	<div class="collection_text">New Electronices Products</div>
+	<!-- <div class="collection_section layout_padding">
 		<div class="container">
 			<h1 class="new_text"><strong>New Arrivals Products</strong></h1>
 			<p class="consectetur_text">New arrival products in electronices</p>
-		</div>
+		</div> -->
 	</div>
 	<div class="layout_padding gallery_section">
 		<div class="container">
 			<div class="row" id="product">
 			</div>
 			<div class="buy_now_bt">
-				<button class="buy_text">See More</button>
+				<!-- <button class="buy_text">See More</button> -->
+				<a href="javascript:prevPage()" id="btn_prev">Prev</a>&nbsp;
+				<a href="javascript:nextPage()" id="btn_next">Next</a><br>
+
 			</div>
 		</div>
 	</div>
@@ -98,11 +101,11 @@
 					</div>
 					<div class="col-sm-6 col-lg-2">
 						<div class="footer-logo"><img src="images/phone-icon.png"><span class="map_text">
-								9319529768</span></div>
+								+91-9319529768</span></div>
 					</div>
 					<div class="col-sm-6 col-lg-3">
 						<div class="footer-logo"><img src="images/email-icon.png"><span
-								class="map_text">thedealindia@gmail.com</span></div>
+								class="map_text">support@thedealindia.com</span></div>
 					</div>
 					<div class="col-sm-6 col-lg-3">
 						<div class="social_icon">
@@ -120,8 +123,7 @@
 			<div class="footer_section_2">
 				<div class="row">
 					<div class="col-sm-4 col-lg-2">
-						<p class="dummy_text"> There are lots of reasons to shop online! It can be fun and convenient.
-							And if you are looking for budget-friendly online shopping, then you are at the right place.
+						<p class="dummy_text">  If you are looking for Trendy and Combos, then you are at the right place. TDI has Latest products and Best Combo Offers for Everyone.
 						</p>
 					</div>
 					<div class="col-sm-4 col-lg-2">
@@ -171,10 +173,13 @@
 
 	<!-- Javascript files-->
 	<script src="js/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paginationjs/2.1.4/pagination.min.js"></script>
 	<!-- // for menu -->
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script>
 		getProducts();
+
 		function getProducts() {
 			fetch('https://script.google.com/macros/s/AKfycbwVqmBSz4R-g-quN7wMen8CpsLEtw8zG_uM3YZWwK7juxfRCF2hxRR_QYCT3-cuop2_tg/exec')
 				.then((response) => response.json())
@@ -205,7 +210,7 @@
 				<div class="col-sm-4">
 					<div class="card">
                    <img class="pImg" src="${newImgUrl}" alt="tdi products"">
-                  <h1>${data[i].name}</h1>
+                  <h3>${data[i].name}</h3>
                        <p class="price">₹${data[i].price}</p>
   
                        </div>
@@ -214,6 +219,55 @@
 			let pElement = document.getElementById("product");
 			pElement.innerHTML = productDiv;
 		}
+
+
+		// pagination start 
+		var current_page = 1;
+		var obj_per_page = 5;
+
+
+		function totNumPages() {
+			return Math.ceil(data.length / obj_per_page);
+		}
+
+		function prevPage() {
+			if (current_page > 1) {
+				current_page--;
+				change(current_page);
+			}
+		}
+		function nextPage() {
+			if (current_page < totNumPages()) {
+				current_page++;
+				change(current_page);
+			}
+		}
+		function change(page) {
+			var btn_next = document.getElementById("btn_next");
+			var btn_prev = document.getElementById("btn_prev");
+			// var listing_table = document.getElementById("TableList");
+			// var page_span = document.getElementById("page");
+			if (page < 1) page = 1;
+			if (page > totNumPages()) page = totNumPages();
+			listing_table.innerHTML = "";
+			for (var i = (page - 1) * obj_per_page; i < (page * obj_per_page); i++) {
+				listing_table.innerHTML += data[i].number + "<br>";
+			}
+			page_span.innerHTML = page;
+			if (page == 1) {
+				btn_prev.style.visibility = "hidden";
+			} else {
+				btn_prev.style.visibility = "visible";
+			}
+			if (page == totNumPages()) {
+				btn_next.style.visibility = "hidden";
+			} else {
+				btn_next.style.visibility = "visible";
+			}
+		}
+
+
+
 	</script>
 </body>
 
