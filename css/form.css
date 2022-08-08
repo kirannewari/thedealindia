@@ -65,7 +65,7 @@
     cursor: pointer;
   }
   button.button {
-    background: rgb(109 215 57);;
+    background: rgb(57, 215, 207);;
     margin: 5%;
     border-top: none;
     outline: none;
@@ -75,8 +75,16 @@
     padding: 5%;
     font-size: 16px;
     cursor: pointer;
+    float: right;
   }
   button.button:hover {
     border-bottom: #a99567 1px solid;
     color: #a99567;
+  }
+  .code{
+    float: right;
+    background-color: yellow;
+    padding: 4%;
+    color: black;
+    font-size: 12px;
   }

@@ -535,9 +535,10 @@ body{
 }
 
 .gallery_section{
+    margin-top: 50%;
 	width: 100%;
 	float: left;
-	background-color: #ff4e5b;
+	background-color: #faf8f8;
 	height: auto;
 
 }
