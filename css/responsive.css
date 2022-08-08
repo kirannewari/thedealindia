@@ -133,7 +133,7 @@
     .buy_bt { display: none;}
     .more_bt {display: none;}
     .star_icon { width: 23%; }
-    .seemore_bt { width: 55%; }
+    .seemore_bt { width: 85%; }
     .sport_text { width: 50%; }
     .left_part { padding-left: 10px;}
     .massage-bt { height: 160px; padding: 55px 20px 10px 20px; }
@@ -458,9 +458,26 @@ ul.link li {
 }
 
 .about-img { margin-left: 0px;}
-.new_bt { margin-left: 0px; width: 33%;}
+.new_bt { margin-left: 0px; width: 50%;}
 .about-img2 { margin-left: 0px;}
 
 
 
+}
+.textC{
+    /* height: 30px; */
+    background-color: yellow;
+    margin-top: 115%;
+    padding: 3%;
+    
+        font-size: 12px;
+    
+}
+.textG{
+    float: right;
+    /* height: 30px; */
+    background-color: rgb(35, 227, 233);
+    margin-top: 2%;
+    padding: 3%;
+        
 }

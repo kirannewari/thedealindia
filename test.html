@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Title of the document</title>
+    <style>
+        .modal {
+            background-color: aqua;
+            height: 400px;
+        }
+
+        .mImg {
+            height: 100px;
+            width: 100%;
+        }
+
+        .mText {
+            height: 40px;
+            background-color: yellow;
+            font-size: 70px;
+            color: rgb(113, 2, 87);
+            text-align: center;
+            margin-top:550px ;
+        }
+        .logo{
+            height: 150px;
+            width: 250px;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+
+<body style="background-color: aqua;">
+	<div >
+        <div class="logo"><a href="#"><img class="logo" src="images/tdi1.png"></a></div>
+    </div>
+    <div class="modal">
+        <div class="mImg">
+            <img src="images/ccc.png">
+
+        </div>
+        <div class="mText">You Have Won The Offer</div>
+    </div>
+
+    <script>
+        let modalBtns = [...document.querySelectorAll(".button")];
+        modalBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                let modal = btn.getAttribute("data-modal");
+                document.getElementById(modal).style.display = "block";
+            };
+        });
+        let closeBtns = [...document.querySelectorAll(".close")];
+        closeBtns.forEach(function (btn) {
+            btn.onclick = function () {
+                let modal = btn.closest(".modal");
+                modal.style.display = "none";
+            };
+        });
+        window.onclick = function (event) {
+            if (event.target.className === "modal") {
+                event.target.style.display = "none";
+            }
+        };
+    </script>
+</body>
+
+</html>

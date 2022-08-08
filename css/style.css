@@ -124,7 +124,7 @@ ol {
 }
 
 p {
-     margin: 20px;
+     /* margin: 20px; */
      font-weight: 300;
      font-size: 15px;
      line-height: 24px;
@@ -427,7 +427,7 @@ body{
 	float: left;
 	text-align: center;
 	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-bottom: 5px;
 	margin: 0px;
 }
 
