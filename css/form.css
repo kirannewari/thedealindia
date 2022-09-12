@@ -88,3 +88,63 @@
     color: black;
     font-size: 12px;
   }
+  .modal2 {
+    background-color: rgb(240, 244, 244);
+    /* height: 400px; */
+}
+.mImg2{
+  
+}
+
+.mImg {
+    /* height: 100px; */
+    width: 100%;
+    max-width: 400px;
+    /* margin-top: 15px; */
+    align-items: center;
+    position: absolute;
+  top: 30%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+
+.mText {
+    /* background: yellow; */
+    font-size: 30px;
+    color: rgb(113, 2, 87);
+    text-align: center;
+    /* margin-top: 550px; */
+}
+
+.logo {
+    height: 150px;
+    width: 250px;
+    margin-left: 30%;
+}
+.mName{
+    color: rgb(191 14 47);
+
+    margin-top: 15%;
+    text-align: center;
+    font-size: 44px;
+    font-weight: bold;
+}
+.gText{
+    /* height: 40px; */
+    font-size: 40px;
+    color: rgb(218 8 74);
+    text-align: center;
+}
+.card2{
+align-items: center;
+}
+
+@media(max-width: 991.98px) {
+  .mName{
+    color: rgb(191 14 47);
+
+    margin-top: 65%;}
+    .mImg {
+      top: 45%;
+    }
+}

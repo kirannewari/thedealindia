@@ -157,7 +157,7 @@ a,
 }
 
 img {
-     max-width: 100%;
+     max-width: 60%;
      height: auto;
 }
 
@@ -412,14 +412,14 @@ body{
     z-index: 1;
 }
 .new_bt{
-	width: 18%;
+	width: 100%;
 	float: left;
 	background-color: #000;
 	font-size: 14pt;
 	text-align: center;
 	color: #ffffff;
 	height: 50px;
-	margin-left: -60px;
+	/* margin-left: -60px; */
 }
 
 .shoes-img{
@@ -535,7 +535,7 @@ body{
 }
 
 .gallery_section{
-    margin-top: 50%;
+    /* margin-top: 50%; */
 	width: 100%;
 	float: left;
 	background-color: #faf8f8;
@@ -663,7 +663,7 @@ a:hover {
 .shop_banner{
 	width: 100%;
 	float: left;
-	background-image: url(../images/shop-banner.png);
+	background-image: url(../images/cc.png);
 	height: auto;
 	padding: 70px;
 }
