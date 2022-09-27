@@ -103,7 +103,7 @@
     /* margin-top: 15px; */
     align-items: center;
     position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%; 
   transform: translate(-50%, -50%);
 }
@@ -138,13 +138,15 @@
 .card2{
 align-items: center;
 }
-
+.p_des{
+  text-align: center;
+}
 @media(max-width: 991.98px) {
   .mName{
     color: rgb(191 14 47);
 
     margin-top: 65%;}
     .mImg {
-      top: 45%;
+      top: 35%;
     }
 }

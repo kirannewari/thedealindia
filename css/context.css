@@ -1,0 +1,57 @@
+.prize{
+  
+margin-bottom: 30px;
+max-width: 90%;
+display: block;
+align-items: center;
+justify-content: center;
+}
+.prize1{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+margin-bottom: 30px;
+}
+.left_text{
+    float: right;
+    font-size: 24pt;
+    font-weight: 500px;
+
+}
+.header_main{
+    height: 120px;
+}
+.new_text {
+    width: 100%;
+    float: left;
+    font-size: 44pt;
+    color: #e209cd;
+   text-align: center;
+}
+.new_text2 {
+    width: 100%;
+    float: left;
+    font-size: 44pt;
+    color: #250321;
+   text-align: center;
+}
+.pImg{
+    margin: 5%;
+    height: 200px;
+    width: 200px;
+}
+.item_text{
+    text-align: center;
+}
+/* for compli page */
+.logo2{
+    height: 100px;
+    width: 200px;
+    align-items: center;
+    margin: 1%;
+}
+@media(max-width: 991.98px) {
+    .header_main{
+        height: 250px;
+    }
+}
