@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/context.css">
 
-
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
@@ -75,25 +74,29 @@
     <!-- new collection section start -->
     <div class="layout_padding container" id="part1">
         <div class="container">
-            <h1 class="new_text"><strong class="text-center">Context and Win Big Prizes</strong></h1>
+            <h1 class="new_text"><strong class="text-center">Enter and Win</strong></h1>
             <p class="consectetur_text">Hello Everyone, The wait is finally over - the NEW PRIZES have arrived. Hurry up
                 and GET before they out.</p>
             <div class="collection_section_2">
-                <div class="row">
+                <img src="./images/prizeList.jpg" style="max-width: 90%">
+                <!-- <div class="row">
                     <div class="col-sm-6 prize">
-                        <img src="./images/prize1.jpg" style="max-width: 90%">
+                        <img src="./images/prizeList.jpg" style="max-width: 90%">
                     </div>
 
-                    <div class="col-sm-6 prize">
-                        
-                        <button class="btn btn-success"  style="display: block;width: 300px;">Registration Fee just <br><b style="font-size: 50px;">₹1999</b></button><br>
-                            <a href="compli.html"><button class="btn btn-warning"  style="display: block;">See Your Complimentary Prizes</button></a>
-
+                    <div class="col-sm-6  ">
+                        <h2><b>3rd Prizes(₹10,000 - 50,000)</b></h2>
+                        <div class="row" id="product"></div>
                     </div>
-                </div>
-                <h2><b>3rd Prizes(Between ₹10,000 - ₹50,000 + Extra 5 point rewards)</b></h2>
-                <div class="row" id="product">
-
+                </div> -->
+<hr>
+                <div class="row prize1">
+                    <button class="btn btn-success" style="display: block;width: 300px;">Registration Fee just <br><b
+                            style="font-size: 50px;">₹1999</b></button><br>
+                    <a href="compli.html">
+                        <div style="margin:20px"><button class="btn btn-warning">See Complimentary
+                            Products<br><small>(+5 point rewards)</small></button></div>
+                        </a>
                 </div>
                 <hr>
                 <div class="row prize1">
@@ -111,7 +114,7 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="prize1">
-                            <img src="./images/cc.png" style="max-width: 500px;">
+                            <img src="./images/cc.png" class="combo">
                         </div>
                     </div>
 
@@ -267,11 +270,13 @@
                     newImgUrl = 'images/tdi1.png';
                 }
                 productDiv = productDiv + `
+               
 				<div class="col-sm-3">
-					<div class="card item_text">
-                   <img class="pImg" src="${newImgUrl}" alt="tdi products"">
-                  <h3>${data[i].name}</h3>
-                       <p class="price">₹${data[i].price}</p>
+                    
+					<div class="item_text">
+                   <img class="pImg" src="${newImgUrl}" alt="tdi products""><br>
+                  <small>${data[i].name}</small>
+
 					  
                        </div>
 				</div>`
