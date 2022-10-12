@@ -1,3 +1,8 @@
+.allMid{
+  display:block;
+  align-items: center;
+  text-align: center;
+}
 .modal {
     display: none;
     position: fixed;
@@ -13,7 +18,7 @@
   .modal-content {
     margin: 50px auto;
     border: 1px solid #999;
-    width: 60%;
+    width: 80%;
   }
   h2,
   p {
@@ -27,10 +32,10 @@
     padding: 0 0 5px;
   }
   form {
-    padding: 25px;
-    margin: 25px;
+    padding: 10px;
+    margin: 5px;
     box-shadow: 0 2px 5px #f5f5f5;
-    background: rgb(237, 229, 119);
+    background: rgb(204 254 210);
   }
   input,
   textarea {
@@ -41,7 +46,8 @@
     outline: none;
   }
   .contact-form button {
-    width: 100%;
+    /* width: 100%; */
+    text-align: center;
     padding: 10px;
     border: none;
     background: #ea371f;
@@ -65,26 +71,28 @@
     cursor: pointer;
   }
   button.button {
-    background: rgb(57, 215, 207);;
-    margin: 5%;
+    background: rgb(16 148 6);
+    margin: 2%;
     border-top: none;
     outline: none;
     border-right: none;
     border-left: none;
     border-bottom: #02274a 1px solid;
     padding: 5%;
-    font-size: 16px;
+    font-size: 20px;
     cursor: pointer;
-    float: right;
+    /* float: right; */
   }
+
   button.button:hover {
     border-bottom: #a99567 1px solid;
     color: #a99567;
   }
+
   .code{
     float: right;
     background-color: yellow;
-    padding: 4%;
+    padding: 1%;
     color: black;
     font-size: 12px;
   }
@@ -141,6 +149,23 @@ align-items: center;
 .p_des{
   text-align: center;
 }
+.rowb{
+  margin-bottom: -20px;
+}
+.diwali{
+max-width: 90%;
+  /* height: 400px; */
+  /* float: right; */
+  margin-bottom: -40px;
+  margin-left: 100px;
+}
+.top30{
+  margin-bottom: -30px;
+}
+.yb{
+  background-color: yellow;
+  padding: 5px;
+}
 @media(max-width: 991.98px) {
   .mName{
     color: rgb(191 14 47);
@@ -148,5 +173,8 @@ align-items: center;
     margin-top: 65%;}
     .mImg {
       top: 35%;
+    }
+    .diwali{
+     margin-left: 0px;
     }
 }
