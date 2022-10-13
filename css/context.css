@@ -67,9 +67,9 @@ text-align: center;
     max-width: 500px;
 }
 .success{
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
+    /* height: 300px; */
+    /* width : 300px; */
+    border-radius: 1%;
 }
 @media(max-width: 991.98px) {
     .header_main{
