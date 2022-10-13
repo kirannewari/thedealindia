@@ -83,16 +83,9 @@
 			<div class="row" id="product">
 			</div>
 							<button class="buy_text">See More</button>
-<!-- 
-			<div class="buy_now_bt">
-				<a href="javascript:prevPage()" id="btn_prev">Prev</a>&nbsp;
-				<a href="javascript:nextPage()" id="btn_next">Next</a><br>
-
-			</div> -->
 		</div>
 	</div>
-	<!-- New Arrivals section end -->
-	<!-- section footer start -->
+
 	<div class="section_footer">
 		<div class="container">
 			<div class="mail_section">
@@ -215,7 +208,7 @@
                    <img class="pImg" src="${newImgUrl}" alt="tdi products"">
                   <h3>${data[i].name}</h3>
                        <p class="price">₹${data[i].price}</p>
-					  <a href="details.html"> <button class="more">More</button><a>
+					  <a href="product.html?productId=${data[i].id}"> <button class="btn btn-success more" >See More</button><a>
                        </div>
 				</div>`
 			}

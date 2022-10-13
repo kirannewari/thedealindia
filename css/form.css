@@ -78,7 +78,7 @@
     border-right: none;
     border-left: none;
     border-bottom: #02274a 1px solid;
-    padding: 5%;
+    /* padding: 5%; */
     font-size: 20px;
     cursor: pointer;
     /* float: right; */

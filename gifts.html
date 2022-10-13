@@ -247,12 +247,12 @@ $('#myCarousel').carousel({
 						newImgUrl = 'images/tdi1.png';
 					}
 					productDiv = productDiv + `
-					<div class="col-sm-4">
+					<div class="col-sm-4 py-3">
 						<div class="card card2">
 					   <img class="pImg" src="${newImgUrl}" alt="tdi products"">
 					  <h3 class="p_des">${data[i].name}</h3>
 						   <b class="price">₹${data[i].price}</b>
-	  
+						   <a href="product.html?productId=${data[i].id}"> <button class="btn btn-success more my-3" >See More</button><a>
 						   </div>
 					</div>`
 				}
