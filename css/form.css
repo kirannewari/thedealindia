@@ -166,6 +166,14 @@ max-width: 90%;
   background-color: yellow;
   padding: 5px;
 }
+.offerBtn{
+  text-align: center;
+
+}
+.offerBtn button{
+  width: 300px;
+  font-size: 30px;
+}
 @media(max-width: 991.98px) {
   .mName{
     color: rgb(191 14 47);
