@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/context.css">
+
+    <style>
+        body {
+            font-family: Arial;
+            align-items: center;
+            background-color: #e8f5c2;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .top {
+            margin-top: 50px;
+            text-align: center;
+            align-items: center;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+        form.example button:hover {
+            background: #0b7dda;
+        }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #image {
+            display: none;
+            margin-top: 15px;
+            /* width: 100%; */
+            height: auto;
+            margin-left: 350px;
+        }
+
+        @media(max-width: 991.98px) {
+            #image {
+                display: none;
+                  width: 100%;
+            height: auto;
+               
+                margin-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contanier top">
+
+        <form class="example" style="margin:auto;max-width:500px">
+            <div class="logo2"><a href="index.html"><img class="logo2" src="images/tdi2.jpg"></a></div>
+            <h1>Track Your Order Here</h1>
+            <input type="text" placeholder="Enter track id" name="search2">
+            <button type="button" onclick="show()" id="btnID"><i class="fa fa-search"></i></button>
+
+        </form>
+        <img src="./images/tracking.jpg" id="image" class="">
+    </div>
+
+
+
+
+    <script>
+        function show() {
+
+            /* Access image by id and change
+            the display property to block*/
+            document.getElementById('image')
+                .style.display = "block";
+
+            document.getElementById('btnID')
+                .style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

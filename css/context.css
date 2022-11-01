@@ -59,8 +59,10 @@ text-align: center;
 }
 .logo2{
     height: 100px;
-    width: 200px;
-    align-items: center;
+    /* width: 200px; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
     margin: 1%;
 }
 .combo{
