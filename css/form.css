@@ -91,7 +91,7 @@
 
   .code{
     float: right;
-    background-color: yellow;
+    background-color: rgb(242, 242, 160);
     padding: 1%;
     color: black;
     font-size: 12px;
@@ -111,7 +111,7 @@
     /* margin-top: 15px; */
     align-items: center;
     position: absolute;
-  top: 50%;
+  top: 32%;
   left: 50%; 
   transform: translate(-50%, -50%);
 }
@@ -180,7 +180,7 @@ max-width: 90%;
 
     margin-top: 65%;}
     .mImg {
-      top: 35%;
+      top: 45%;
     }
     .diwali{
      margin-left: 0px;
