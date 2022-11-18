@@ -157,7 +157,7 @@ a,
 }
 
 img {
-     max-width: 60%;
+     max-width: 70%;
      height: auto;
 }
 .car_img{
@@ -514,8 +514,8 @@ body{
 .sale_text{
 	width: 100%;
 	float: left;
-	font-size: 45pt;
-	color: #ed2540;
+	font-size: 35pt;
+	color: #692205;
 	line-height: 75px;
 }
 
@@ -523,7 +523,7 @@ body{
 	width: 100%;
 	float: left;
 	font-size: 45pt;
-	color: #ed2540;
+	color: #cd0b25;
 	line-height: 75px;
 
 }
@@ -532,7 +532,7 @@ body{
 	width: 50%;
 	height: 50px;
 	color: #ffffff;
-	background-color: #ff4e5b;
+	background-color: #a30510;
 	color: #ffffff;
 	font-size: 16pt;	
 	margin-top: 35px;
